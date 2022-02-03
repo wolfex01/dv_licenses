@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600&display=swap');
+
+body,html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    visibility: hidden;
+    display: grid;
+    overflow: hidden;
+    user-select: none;
+    place-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    border-radius: 9px;
+    border: solid 3px black;
+    overflow: hidden;
+    height: 230px;
+    background-color: #080b0fa1;
+}
+
+.header {
+    font-family: 'Saira Condensed', sans-serif;
+    color: snow;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
+}
+
+.header2 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 100%;
+    color: snow;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
+}
+
+.close {
+    border: 0;
+    position: absolute;
+    top: 4%;
+    right: 2%;
+}
+
+.driver {
+    position: absolute;
+    overflow: hidden;
+    width: 25%;
+    height: 50%;
+    top: 35%;
+    left: 20%;
+    border: 2px solid rgb(20, 14, 26);
+    border-radius: 9px;
+}
+
+.driver:active {
+  background-color: #080b0f60;
+  transform: translateY(4px);
+}
+
+.idcard:hover {background-color: #080b0f60;}
+
+.driver:hover {background-color: #080b0f60}
+
+.idcard:active {
+  background-color: #080b0f60;
+  transform: translateY(4px);
+}
+
+.idcard {
+    position: absolute;
+    overflow: hidden;
+    width: 25%;
+    height: 50%;
+    top: 35%;
+    right: 20%;
+    border: 2px solid rgb(20, 14, 26);
+    border-radius: 9px;
+}
+
+.bottomId {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 100%;
+    color: snow;
+    border: 0;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
+}
+
+.bottomDriver {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 100%;
+    color: snow;
+    border: 0;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
+}
+
+.hide {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
+    color: snow;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+.hideCard {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
+    color: snow;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+.bottomId:hover + .hideCard {
+    display: block;
+}
+
+.bottomDriver:hover + .hide {
+    display: block;
+}
