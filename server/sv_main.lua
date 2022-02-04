@@ -7,7 +7,7 @@ AddEventHandler('dv_licenses:buy', function(type, price)
     local xPlayer = ESX.GetPlayerFromId(source)
 
     if xPlayer.getMoney() >= price then
-        if type ~= "DriverLicense" then
+        if type == "DriverLicense" then
             xPlayer.removeMoney(Config.DriverLicense.item_price)
             xPlayer.addInventoryItem(Config.DriverLicense.item_name, 1)
             if Config.UseDvNotify then
