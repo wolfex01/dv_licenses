@@ -24,8 +24,8 @@ window.addEventListener('message', function(event) {
 let driver = document.querySelector(".bottomDriver")
 driver.addEventListener('click', () => {
     $('.box').fadeOut();
-    $.post('http://dv_licenses/close')
-    $.post(`http://dv_licenses/buy`, JSON.stringify({
+    $.post(`http://${GetParentResourceName()}/close`)
+    $.post(`http://${GetParentResourceName()}/buy`, JSON.stringify({
       type: "DriverLicense",
       price: data.driverPrice
     })
@@ -35,8 +35,8 @@ driver.addEventListener('click', () => {
 let idcard = document.querySelector(".bottomId")
 idcard.addEventListener('click', () => {
     $('.box').fadeOut();
-    $.post('http://dv_licenses/close')
-    $.post(`http://dv_licenses/buy`, JSON.stringify({
+    $.post(`http://${GetParentResourceName()}/close`)
+    $.post(`http://${GetParentResourceName()}/buy`, JSON.stringify({
       type: "CardLicense",
       price: data.cardPrice
     })
@@ -46,13 +46,13 @@ idcard.addEventListener('click', () => {
 let close = document.querySelector(".close")
 close.addEventListener('click', () => {
     $('.box').fadeOut();
-    $.post('http://dv_licenses/close'
+    $.post(`http://${GetParentResourceName()}/close`
   );
 })
 
 $(document).keyup(function(e){
     if (e.keyCode == 27){
         $('.box').fadeOut();
-        $.post('http://dv_licenses/close');
+        $.post(`http://${GetParentResourceName()}/close`);
     }
 })
