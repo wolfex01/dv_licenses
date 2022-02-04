@@ -30,7 +30,6 @@ RegisterNUICallback('report', function(data)
 end)
 
 RegisterNUICallback('buy', function(data)
-    print(data.type .. " - " ..data.price)
     TriggerServerEvent('dv_licenses:buy', data.type, data.price)
 end)
 
