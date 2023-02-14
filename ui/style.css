@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600&display=swap');
 
-body,html {
+html, body {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -11,11 +13,10 @@ body {
     overflow: hidden;
     user-select: none;
     place-items: center;
+    background-color: #080b0fa1;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -28,20 +29,10 @@ body {
     border: solid 3px black;
     overflow: hidden;
     height: 230px;
-    background-color: #080b0fa1;
 }
 
-.header {
+.header, .header2 {
     font-family: 'Saira Condensed', sans-serif;
-    color: snow;
-    width: 100%;
-    text-align: center;
-    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
-}
-
-.header2 {
-    font-family: 'Saira Condensed', sans-serif;
-    font-size: 100%;
     color: snow;
     width: 100%;
     text-align: center;
@@ -55,48 +46,35 @@ body {
     right: 2%;
 }
 
-.driver {
+.driver, .idcard {
     position: absolute;
     overflow: hidden;
     width: 25%;
     height: 50%;
     top: 35%;
-    left: 20%;
     border: 2px solid rgb(20, 14, 26);
     border-radius: 9px;
+    transition: background-color 0.4s, transform 0.4s;
 }
 
-.driver:active {
+.driver:active, .idcard:active {
   background-color: #080b0f60;
   transform: translateY(4px);
 }
 
-.idcard:hover {background-color: #080b0f60;}
-
-.driver:hover {background-color: #080b0f60}
-
-.idcard:active {
+.idcard:hover, .driver:hover {
   background-color: #080b0f60;
-  transform: translateY(4px);
 }
 
 .idcard {
-    position: absolute;
-    overflow: hidden;
-    width: 25%;
-    height: 50%;
-    top: 35%;
     right: 20%;
-    border: 2px solid rgb(20, 14, 26);
-    border-radius: 9px;
 }
 
-.bottomId {
+.bottomId, .bottomDriver {
     font-family: 'Saira Condensed', sans-serif;
     font-size: 100%;
     color: snow;
     border: 0;
-    -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     text-decoration: none;
     width: 100%;
@@ -104,20 +82,7 @@ body {
     background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
 }
 
-.bottomDriver {
-    font-family: 'Saira Condensed', sans-serif;
-    font-size: 100%;
-    color: snow;
-    border: 0;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    width: 100%;
-    text-align: center;
-    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
-}
-
-.hide {
+.hide, .hideCard {
     display: none;
     overflow: hidden;
     position: absolute;
@@ -131,24 +96,6 @@ body {
     width: 100%;
 }
 
-.hideCard {
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    text-align: center;
-    background: linear-gradient(45deg, #d31f37 50%, #dd9206 85%, #797709 100%) fixed;
-    color: snow;
-    font-family: 'Saira Condensed', sans-serif;
-    font-size: 100%;
-    text-align: center;
-    width: 100%;
-}
-
-.bottomId:hover + .hideCard {
-    display: block;
-}
-
-.bottomDriver:hover + .hide {
+.bottomId:hover + .hideCard, .bottomDriver:hover + .hide {
     display: block;
 }
