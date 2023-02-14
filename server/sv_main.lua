@@ -32,3 +32,4 @@ AddEventHandler('dv_licenses:buy', function(type, price)
         end  
     end
 end)
+
